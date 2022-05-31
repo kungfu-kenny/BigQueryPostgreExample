@@ -21,5 +21,5 @@ COPY . .
 
 ENV FLEX_TEMPLATE_PYTHON_PY_FILE="${WORKDIR}/develop_send.py"
 
-RUN pip install requirements.txt
+RUN pip install pandas sqlalchemy python-dotenv psycopg2-binary
 RUN pip install apache-beam[gcp]
