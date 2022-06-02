@@ -36,7 +36,7 @@ class DatabaseDevelop:
     """
     def __init__(self) -> None:
         self.engine = create_engine(
-            f'postgresql://{DataBase.data}:{DataBase.pawd}@{DataBase.host}/{DataBase.user}'
+            f'postgresql://{DataBase.data}:{DataBase.pawd}@{DataBase.host}:{DataBase.port}/{DataBase.user}'
         )
         self.create_db()
         self.session = self.produce_session()
